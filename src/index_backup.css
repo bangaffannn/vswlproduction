@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    color: white;
+}
+
+p {
+    font-size: large;
+}
+
+h3 {
+    color: #F638DC;
+}
