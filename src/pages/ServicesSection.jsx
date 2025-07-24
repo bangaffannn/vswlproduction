@@ -1,9 +1,9 @@
 import React from "react";
 import vidGrowth from "../assets/Vid/GUT.mp4";
-import vidBranding from "../assets/Vid/ShapeTimelineInfographic.mp4";
+import vidBranding from "../assets/Vid/coffee.mp4";
 import vidProduction from "../assets/Vid/Comp1short.mp4";
-import vidPartner from "../assets/Vid/Style4_1.mp4";
-import vidEdu from "../assets/Vid/Compilation.mp4"; // Pastikan kamu punya video ini
+import vidPartner from "../assets/Vid/Style.mp4";
+import vidEdu from "../assets/Vid/ShapeTimelineInfographic.mp4";
 
 const services = [
   {
@@ -19,39 +19,40 @@ const services = [
     video: vidProduction,
   },
   {
-    title: "Konten Edukasi & Pembelajaran Interaktif",
+    title:
+      "Konten Edukasi, Kampanye, Visualisasi Data & Pembelajaran Interaktif",
     description:
       "Kami menciptakan konten edukatif visual seperti video pembelajaran, animasi data, dan motion infographic untuk kebutuhan dosen, lembaga training, bimbel, dan institusi pendidikan. Membantu meningkatkan daya serap dan engagement audiens.",
     video: vidEdu,
   },
   {
-    title: "Konten Kampanye, Visualisasi Data dan Konten Komersil yang Berdampak",
+    title: "Video dan Foto Produk",
     description:
-      "VSWL menciptakan konten visual kreatif dan strategis seperti 3D product advertising, VFX, serta visualisasi data untuk kampanye, sosial media, hingga presentasi akademik dan publik.",
+      "Dengan pendekatan storytelling dan teknik pengambilan gambar yang estetik, kami bantu brand Anda tampil lebih meyakinkan dan kompetitif di pasar digital.",
     video: vidBranding,
   },
-  // {
-  //   title: "Personal & Institutional Branding untuk Akademisi dan Tokoh Publik",
-  //   description:
-  //     "Kami menjadi partner strategi branding digital bagi akademisi, politisi, tokoh publik, serta lembaga pendidikan. Dengan narasi yang kuat dan tampilan visual yang konsisten, kami bantu Anda membangun citra yang kredibel dan berpengaruh.",
-  //   video: vidPartner,
-  // },
+  {
+    title: "Personal & Institutional Branding untuk Akademisi dan Tokoh Publik",
+    description:
+      "Kami menjadi partner strategi branding digital bagi akademisi, politisi, tokoh publik, serta lembaga pendidikan. Dengan narasi yang kuat dan tampilan visual yang konsisten, kami bantu Anda membangun citra yang kredibel dan berpengaruh.",
+    video: vidPartner,
+  },
 ];
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-20">
+    <section id="services" className="py-24 text-gray-900">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold font-serif text-center text-gray-900 mb-16">
-          Apa Yang VSWL Kerjakan?
+        <h2 className="text-3xl md:text-4xl font-bold font-serif text-center tracking-tight leading-snug mb-16">
+          Apa Masalah Yang Dapat VSWL Pecahkan?
         </h2>
-        <div className="space-y-24 max-w-6xl mx-auto">
+        <div className="space-y-32 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <div
               key={index}
               className={`flex flex-col md:flex-row ${
                 index % 2 === 1 ? "md:flex-row-reverse" : ""
-              } items-center gap-10`}
+              } items-center gap-16`}
             >
               <div className="w-full md:w-1/2">
                 <video
@@ -60,14 +61,14 @@ const ServicesSection = () => {
                   muted
                   loop
                   playsInline
-                  className="w-full rounded-xl shadow-md"
+                  className="w-full rounded-xl ring-1 ring-gray-200 shadow-sm"
                 />
               </div>
-              <div className="w-full md:w-1/2 space-y-4">
-                <h3 className="text-2xl font-semibold text-gray-800">
+              <div className="w-full md:w-1/2 space-y-5">
+                <h3 className="text-2xl font-semibold text-gray-800 tracking-tight hover:text-gray-600 transition-all duration-300">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-lg">
+                <p className="text-gray-600 text-lg leading-relaxed">
                   {service.description}
                 </p>
               </div>
